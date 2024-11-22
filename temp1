@@ -1,6 +1,16 @@
 ad-hoc policy run
 Near Realtime Configuration Evaluation
 Toxic combination support for Azure
+
+| Requirement ID | Requirement Title                     | Requirement Description                                                                                                                                                                                                                                               | Requirement Rationale                                                                                                                                                                                          | Priority  | Requirement Dependency           |
+|----------------|--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|----------------------------------|
+| REQ-062        | Infrastructure-as-Code (IaC) Remediation Guidance | Provide Infrastructure-as-Code (IaC) snippets or examples in the remediation guidance for identified misconfigurations. These code snippets should demonstrate how to resolve issues directly within IaC frameworks like Terraform, CloudFormation, or Azure Resource Manager templates.  | Offering IaC remediation guidance enables development and DevOps teams to fix misconfigurations directly at the source code level, ensuring consistent and long-term fixes. It also encourages teams to integrate security earlier in the software development lifecycle. | 75 days   | N/A                              |
+| REQ-063        | Policy Export Capability              | Enable users to export all CSPM policies, including both in-built and custom policies, along with all relevant details. The export should include policy names, descriptions, cloud provider, compliance mappings, severity levels, remediation actions, and any associated rules. The export format should be user-selectable (e.g., CSV, JSON, PDF) for easy integration with other systems or for audit purposes. | Exporting policies allows organizations to maintain documentation for compliance purposes, integrate policy information into other tools, and streamline collaboration across teams by sharing a complete set of security policies and configurations. | 60 days   | N/A                              |
+| REQ-061        | Validation of Security Findings       | The CSPM platform must validate identified security findings by confirming their exposure with external verification. For instance, if a cloud storage bucket is flagged as publicly exposed, the platform should verify this by simulating an internet connection to confirm accessibility. Additionally, the platform must provide proof of validation, including screenshots, HTTP request and response details, or other forms of evidence. | Providing validation and proof for identified findings enhances the credibility of alerts, reduces false positives, and helps security teams prioritize actions with greater confidence. | 90 days   | N/A                              |
+| REQ-069        | Natural Language Query Interface      | Provide an interface that allows users to create natural language-like queries to explore cloud resources, relationships, and security insights. The interface should be capable of understanding user input in a conversational manner and return results in graphical or tabular formats based on the user's preference. The results can include relationship visualizations, compliance status, access paths, or other relevant insights into the cloud environment. | Enabling users to query data using natural language makes it accessible to non-technical users, reducing the learning curve and increasing adoption. Presenting the results in multiple formats helps users understand complex data based on their individual needs. | 120 days  | REQ-064 (Cloud Resource Relationship Mapping) |
+| REQ-070        | Network Reachability Analysis         | Provide the ability to analyze and visualize network reachability for all cloud resources and workloads. This feature should identify which resources and workloads are accessible over the internet or within the internal network and assess connectivity paths, such as open ports, security group rules, and firewall configurations. | Understanding network reachability is crucial for identifying potential attack surfaces and mitigating network-level risks. It enables security teams to proactively secure resources by limiting unnecessary exposure. | 90 days   | N/A                              |
+
+
 # Requirements Table (REQ-091 through REQ-107)
 
 | REQ ID | Category | Description | Rationale | Priority | Dependency | Est. Time (days) |
@@ -55,59 +65,8 @@ REQ-026: Contextual Links to Documentation
     •    Priority: Medium
     •    Req Dependency: REQ-025
     •    Estimated Time to Implement (in days): 5
+Here's the information in a tabular format:
 
-Requirement ID: REQ-062
-
-Requirement Title: Infrastructure-as-Code (IaC) Remediation Guidance
-
-Requirement Description: Provide Infrastructure-as-Code (IaC) snippets or examples in the remediation guidance for identified misconfigurations. These code snippets should demonstrate how to resolve issues directly within IaC frameworks like Terraform, CloudFormation, or Azure Resource Manager templates.
-
-Requirement Rationale: Offering IaC remediation guidance enables development and DevOps teams to fix misconfigurations directly at the source code level, ensuring consistent and long-term fixes. It also encourages teams to integrate security earlier in the software development lifecycle.
-
-Priority: 75 days
-
-Requirement ID: REQ-063
-
-Requirement Title: Policy Export Capability
-
-Requirement Description: Enable users to export all CSPM policies, including both in-built and custom policies, along with all relevant details. The export should include policy names, descriptions, cloud provider, compliance mappings, severity levels, remediation actions, and any associated rules. The export format should be user-selectable (e.g., CSV, JSON, PDF) for easy integration with other systems or for audit purposes.
-
-Requirement Rationale: Exporting policies allows organizations to maintain documentation for compliance purposes, integrate policy information into other tools, and streamline collaboration across teams by sharing a complete set of security policies and configurations.
-
-Priority: 60 days
-
-
-Requirement ID: REQ-061
-
-Requirement Title: Validation of Security Findings
-
-Requirement Description: The CSPM platform must validate identified security findings by confirming their exposure with external verification. For instance, if a cloud storage bucket is flagged as publicly exposed, the platform should verify this by simulating an internet connection to confirm accessibility. Additionally, the platform must provide proof of validation, including screenshots, HTTP request and response details, or other forms of evidence.
-
-Requirement Rationale: Providing validation and proof for identified findings enhances the credibility of alerts, reduces false positives, and helps security teams prioritize actions with greater confidence.
-
-Priority: 90 days
-
-Requirement ID: REQ-069
-
-Requirement Title: Natural Language Query Interface
-
-Requirement Description: Provide an interface that allows users to create natural language-like queries to explore cloud resources, relationships, and security insights. The interface should be capable of understanding user input in a conversational manner and return results in graphical or tabular formats based on the user's preference. The results can include relationship visualizations, compliance status, access paths, or other relevant insights into the cloud environment.
-
-Requirement Rationale: Enabling users to query data using natural language makes it accessible to non-technical users, reducing the learning curve and increasing adoption. Presenting the results in multiple formats helps users understand complex data based on their individual needs.
-
-Priority: 120 days
-
-Requirement Dependency: REQ-064 (Cloud Resource Relationship Mapping)
-
-Requirement ID: REQ-070
-
-Requirement Title: Network Reachability Analysis
-
-Requirement Description: Provide the ability to analyze and visualize network reachability for all cloud resources and workloads. This feature should identify which resources and workloads are accessible over the internet or within the internal network and assess connectivity paths, such as open ports, security group rules, and firewall configurations.
-
-Requirement Rationale: Understanding network reachability is crucial for identifying potential attack surfaces and mitigating network-level risks. It enables security teams to proactively secure resources by limiting unnecessary exposure.
-
-Priority: 90 days
 
 Sure! Below is the breakdown of the requirements **REQ-013**, **REQ-016**, and **REQ-017** in a markdown table format.
 
