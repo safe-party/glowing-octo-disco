@@ -1,4 +1,29 @@
 ad-hoc policy run
+Requirement ID: REQ-072
+
+Requirement Title: Ad-Hoc Policy Execution Trigger
+
+Requirement Description: Provide users with the ability to trigger ad-hoc execution of Cloud Security Posture Management (CSPM) policies on-demand. This feature should allow users to manually initiate the execution of compliance checks or configuration assessments for specific cloud accounts, resource groups, or selected policies.
+
+Requirement Rationale: Ad-hoc execution allows users to quickly validate changes or assess security posture without waiting for scheduled scans. This flexibility is particularly useful during incident investigations, validation of recent configuration changes, or when new policies are added to ensure immediate assessment.
+
+Priority: 60 days
+
+Requirement Dependency: REQ-010 (Centralized Policy Management)
+
+Requirement ID: REQ-073
+
+Requirement Title: Ad-Hoc Finding Validation
+
+Requirement Description: Allow users to perform ad-hoc validation of specific findings detected by the CSPM platform. Users should be able to select a finding and trigger a validation process that rechecks the current state of the identified issue. The system should confirm whether the finding still exists, providing evidence such as updated screenshots, configuration snapshots, or HTTP request-response details.
+
+Requirement Rationale: Ad-hoc validation of findings is essential for ensuring the accuracy of alerts and for verifying the remediation status. This capability helps reduce false positives and gives users confidence in the current state of their cloud environment by allowing immediate re-assessment of security issues.
+
+Priority: 60 days
+
+Requirement Dependency: REQ-003 (Continuous Configuration Assessment)
+
+
 Near Realtime Configuration Evaluation
 Toxic combination support for Azure
 
